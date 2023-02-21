@@ -22,7 +22,9 @@ const Additem = () => {
 
     }
     return (
-        <div className='flex justify-center items-center h-full '>
+      <div className="">
+             <h3 className='py-3 text-center text-2xl'>Add Item</h3>
+        <div className='flex justify-center items-center h-full '>  
       <form
         className='shadow-lg p-10 rounded-md flex flex-wrap gap-3 max-w-3xl justify-between bg-white'
         onSubmit={handleSubmit(submit)}
@@ -68,13 +70,6 @@ const Additem = () => {
           </label>
           <input type='number' name='year' className='border p-2 ' id='year' {...register("year")} />
         </div>
-
- 
-      
-        
-        
-        
-
         <div className='flex justify-between items-center w-full'>
           <button
             className=' px-4 py-3 bg-indigo-500 rounded-md font-semibold text-white text-lg disabled:bg-gray-500'
@@ -84,6 +79,7 @@ const Additem = () => {
           </button>
         </div>
       </form>
+    </div>
     </div>
     );
 };

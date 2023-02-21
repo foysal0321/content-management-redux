@@ -9,12 +9,6 @@ const CartDetails = () => {
     const {name, about, cetagori, image} = products
     const dispath = useDispatch()
 
-    // const remove=(id)=>{
-    //   dispath(dele(id))
-    //   console.log(id);
-    // }
- 
-    //console.log(products);
     return (
         <div>
             <div className='shadow-lg relative rounded-3xl border p-3 flex flex-col text-indigo-900'>
@@ -29,7 +23,7 @@ const CartDetails = () => {
          <div className='flex gap-2 mt-5'>
          </div>
          <ul>
-         <Link to='/additem' >
+         <Link to={`/updateitem/${products._id}`} >
             <button className='bg-slate-700 p-3 text-white m-2'>Update item</button>
             </Link>
          

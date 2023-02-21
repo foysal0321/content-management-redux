@@ -21,7 +21,7 @@ const Home = () => {
     const activeClass = "text-white bg-indigo-500 border-white";
 
     if(products.length){
-        context = products.map(item=> <ProductCart
+        context = products.sort((a,b)=> a.years - b.years ).map(item=> <ProductCart
         key={item._id}
         product={item} >
         </ProductCart>)
@@ -41,6 +41,8 @@ const Home = () => {
            }
            return item
         })
+
+        .sort((a,b)=> a.years - b.years )
        .map(item=> <ProductCart 
         key={item._id}
         product={item} >

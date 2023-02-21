@@ -9,8 +9,7 @@ const ProductCart = ({product}) => {
           <img src={product.image}  />
         </div>
         <h1 className='font-bold text-center text-2xl py-2'>{product.name}</h1>
-        <p className='text-center font-semibold mb-1'>Posted month: {product.month}</p>
-        <p className='text-center font-semibold mb-3'>Posted years: {product.years}</p>
+        <p className='text-center font-semibold mb-1'>Posted date: {product.month} / {product.years}</p>
         <div className='flex gap-2 mt-5'>
          <Link to ={`/details/${product._id}`}>
             <button           

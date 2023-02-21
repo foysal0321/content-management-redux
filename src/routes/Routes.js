@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Additem from "../components/addItem/Additem";
+import UpdateItem from "../components/addItem/UpdateItem";
 import CartDetails from "../components/details/CartDetails";
 import Dashbord from "../components/Home/dashbord/Dashbord";
 import Home from "../components/Home/Home";
@@ -21,11 +22,16 @@ export const router = createBrowserRouter([
             {
                 path: '/details/:id',
                 element: <CartDetails />,
-                loader: ({params})=> fetch(`http://localhost:5000/items/${params.id}`)              
+                loader: ({params})=> fetch(`https://content-management-server-eight.vercel.app/items/${params.id}`)              
             },
             {
                 path: '/additem',
                 element: <Additem />
+            },
+            {
+                path: '/updateitem/:id',
+                element: <UpdateItem />,
+                loader: ({params})=> fetch(`https://content-management-server-eight.vercel.app/items/${params.id}`) 
             }
         ]
     }

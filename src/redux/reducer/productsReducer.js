@@ -1,4 +1,4 @@
-import { ADD_DATA, LOAD_DATA, REMOVE_DATA } from "../actionType.js/actionType";
+import { ADD_DATA, LOAD_DATA, REMOVE_DATA, UPDATE_DATA } from "../actionType.js/actionType";
 
 const initialState = {
     products: []
@@ -24,6 +24,12 @@ const productsReducer = (state = initialState, action)=>{
                   (product) => product._id !== action.payload
                 ),
               };
+
+              case UPDATE_DATA :
+                return{
+                    ...state,
+                    products : [...state.products, action.payload]
+                }
 
         default : 
           return state

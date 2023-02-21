@@ -3,7 +3,7 @@ import { addData } from '../action/products';
 
 const Addproduct = (products) => {
     return async(dispatch, getdata)=>{
-       const res = await fetch('http://localhost:5000/items/',{
+       const res = await fetch('https://content-management-server-eight.vercel.app/items/',{
        method: 'POST',
        body: JSON.stringify(products),
        headers: {
@@ -18,6 +18,7 @@ const Addproduct = (products) => {
             ...products
           })
         );
+        alert('done')
       }
     }
 };
