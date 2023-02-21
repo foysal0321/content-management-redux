@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
+import Addproduct from '../../redux/thunk/Addproduct';
 
 const Additem = () => {
     const { register, handleSubmit } = useForm();
@@ -10,13 +11,14 @@ const Additem = () => {
         const product={
             name: data.name,
             image: data.image,
-            ceta: data.ceta,
+            cetagori: data.ceta,
             about: data.about,
             month: data.month,
-            year: data.year,
+            years: data.year,
+            status: true
         }
-        console.log(product);
-        
+        //console.log(product);
+        dispatch(Addproduct(product))
 
     }
     return (

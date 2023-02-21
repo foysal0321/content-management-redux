@@ -19,8 +19,9 @@ export const router = createBrowserRouter([
                 element: <Dashbord />
             },
             {
-                path: '/details',
-                element: <CartDetails />
+                path: '/details/:id',
+                element: <CartDetails />,
+                loader: ({params})=> fetch(`http://localhost:5000/items/${params.id}`)              
             },
             {
                 path: '/additem',

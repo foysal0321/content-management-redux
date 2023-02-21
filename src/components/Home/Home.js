@@ -63,8 +63,11 @@ const Home = () => {
                 <Link>
                 <button onClick={()=> dispath(toggleCeta('database'))} className={`border px-3 py-2 rounded-full font-semibold ${cetagory.includes('database') ? activeClass: null}`}>Database</button>
                 </Link>
-                
+                <Link to='/additem' >
+            <button className='bg-slate-700 p-2 rounded-sm text-white m-2 mx-24'>Add item</button>
+            </Link>
             </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 p-12">
             {
               context
